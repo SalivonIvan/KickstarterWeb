@@ -3,7 +3,7 @@
     <context-param>
         <description>defines mode</description>
         <param-name>mode</param-name>
-        <param-value>file</param-value>
+        <param-value>db</param-value>
     </context-param>
     <session-config>
         <session-timeout>

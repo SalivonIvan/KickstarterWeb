@@ -53,7 +53,6 @@ public class QuoteAndCategoryServlet extends HttpServlet {
                 out.println("<li><a href='kickstarter/category?id=" + DaoFactory.getCategoryDao(dataType).getAllCategories().get(i).getId()
                         + "'>" + DaoFactory.getCategoryDao(dataType).getAllCategories().get(i).getName() + "</a></li>");
             }
-            out.println(request.getContextPath());
             out.println("</ul>");
             out.println("</body>");
             out.println("</html>");
