@@ -1,4 +1,34 @@
 body {
-   background: antiquewhite 
+    background: antiquewhite;
+    border: 2px blue solid;
+
+
+}
+#idProject{
+    visibility: hidden;
+}
+h1{
+
+}
+
+header{
+    background: lightgray;
+    background-image: url(resource/logo_name.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 110px;
+    vertical-align: central;
+}
+
+header #logo {
+    float: left;
+}
+header #logo_name {
+
+}
+footer{
+    vertical-align: middle;
+    background: lightgray;
+    height: 60px;
 }
 

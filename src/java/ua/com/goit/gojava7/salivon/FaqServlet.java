@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import ua.com.goit.gojava7.salivon.beans.Faq;
+import ua.com.goit.gojava7.salivon.beans.Project;
 import ua.com.goit.gojava7.salivon.dao.DaoFactory;
 import ua.com.goit.gojava7.salivon.dao.DataType;
 import ua.com.goit.gojava7.salivon.dao.FaqDao;
@@ -19,9 +20,7 @@ public class FaqServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         saveFaq(request);
-        response.sendRedirect("/kickstarter/project");
-//        RequestDispatcher dispatcher = request.getRequestDispatcher("/project");
-//        dispatcher.forward(request, response);
+        response.sendRedirect("project");
     }
 
     @Override
@@ -34,7 +33,7 @@ public class FaqServlet extends HttpServlet {
         String contextFaq = request.getParameter("faq");
         DataType dataType = (DataType) getServletContext().getAttribute("mode");
         FaqDao fDao = DaoFactory.getFaqDao(dataType);
-        int idProject = (int) request.getSession().getAttribute("idProject");
+        int idProject = Integer.parseInt(request.getParameter("id"));
         Faq faq = new Faq(idProject, contextFaq);
         fDao.saveFaq(faq);
     }
