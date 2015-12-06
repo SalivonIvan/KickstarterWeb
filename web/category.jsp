@@ -1,7 +1,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="WEB-INF/jspf/header.jspf" %>
-<section id="main">
+<section id="category">
     <h1>Category ${requestScope.category.name}</h1>
     <c:forEach var="project" items="${requestScope.projects}">
         <h2> <a href="project?id=${project.id}"> ${project.title}</a></h2>

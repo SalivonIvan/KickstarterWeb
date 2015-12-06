@@ -1,13 +1,7 @@
 <%@ page pageEncoding="UTF-8" %>
 <footer>
-</tr>
-<tr> 
-    <td colspan="3">
-        <p class="copyright" align="center">&copy; Copyright ${currentYear} 
-            Salivon Ivan &amp; Associates, Inc. All rights reserved.</p>
-    </td>
-</tr>
-</table>
+    <p class="copyright">&copy; Copyright ${currentYear} 
+        Salivon Ivan &amp; Associates, Inc. All rights reserved.</p>
 </footer>
 </body>
 </html>

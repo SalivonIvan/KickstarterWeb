@@ -5,7 +5,7 @@
 <%@page import="ua.com.goit.gojava7.salivon.dao.DaoFactory"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="WEB-INF/jspf/header.jspf" %>
-<section id="main">
+<section id="category">
     <h1>Welcome Kickstarter</h1>
     <h3><% DataType dataType = (DataType) getServletContext().getAttribute("mode");%>
         <%=DaoFactory.getQuoteDao(dataType).getRandomQuote()%>

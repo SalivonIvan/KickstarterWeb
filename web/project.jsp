@@ -1,6 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="WEB-INF/jspf/header.jspf" %>
-<section id="main">
+<section id="category">
     <h2>${requestScope.project.title}</h2>
     Description: ${requestScope.project.description}<br>
     Total ${requestScope.project.total}$<br>

@@ -1,6 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="WEB-INF/jspf/header.jspf" %>
-<section id="main">
+<section id="category">
     <p>Enter data</p>
     <form action="payment" method="POST">
         <table border="1">
