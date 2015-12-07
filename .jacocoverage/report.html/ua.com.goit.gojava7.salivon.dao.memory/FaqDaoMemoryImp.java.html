@@ -10,16 +10,16 @@ import ua.com.goit.gojava7.salivon.stores.StoreProjects;
 
     @Override
     public void saveFaq(Faq faq) {
-<span class="nc" id="L13">        int id = faq.getIdProject();</span>
-<span class="nc" id="L14">        String context = faq.getContext();</span>
-<span class="nc" id="L15">        List&lt;Project&gt; projects = StoreProjects.getProjects();</span>
-<span class="nc bnc" id="L16" title="All 2 branches missed.">        for (Project project : projects) {</span>
-<span class="nc bnc" id="L17" title="All 2 branches missed.">            if (id == project.getId()) {</span>
-<span class="nc" id="L18">                project.setFaq(context);</span>
-<span class="nc" id="L19">                break;</span>
+<span class="fc" id="L13">        int id = faq.getIdProject();</span>
+<span class="fc" id="L14">        String context = faq.getContext();</span>
+<span class="fc" id="L15">        List&lt;Project&gt; projects = StoreProjects.getProjects();</span>
+<span class="pc bpc" id="L16" title="1 of 2 branches missed.">        for (Project project : projects) {</span>
+<span class="pc bpc" id="L17" title="1 of 2 branches missed.">            if (id == project.getId()) {</span>
+<span class="fc" id="L18">                project.setFaq(context);</span>
+<span class="fc" id="L19">                break;</span>
             }
 <span class="nc" id="L21">        }</span>
-<span class="nc" id="L22">    }</span>
+<span class="fc" id="L22">    }</span>
 
     @Override
     public String getContextFaq(int idProject) {

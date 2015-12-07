@@ -16,18 +16,18 @@ import ua.com.goit.gojava7.salivon.dao.PaymentDao;
 
     @Override
     public void savePayment(Payment payment) {
-<span class="nc" id="L19">        File file = new File(PathFile.PAYMENT.getPath());</span>
-<span class="nc" id="L20">        int idProject = payment.getIdProject();</span>
-<span class="nc" id="L21">        String namePayer = payment.getNamePayer();</span>
-<span class="nc" id="L22">        long numberCard = payment.getNumberCard();</span>
-<span class="nc" id="L23">        int total = payment.getTotal();</span>
+<span class="fc" id="L19">        File file = new File(PathFile.PAYMENT.getPath());</span>
+<span class="fc" id="L20">        int idProject = payment.getIdProject();</span>
+<span class="fc" id="L21">        String namePayer = payment.getNamePayer();</span>
+<span class="fc" id="L22">        long numberCard = payment.getNumberCard();</span>
+<span class="fc" id="L23">        int total = payment.getTotal();</span>
 <span class="nc" id="L24">        try (BufferedWriter br = new BufferedWriter(new FileWriter(file, true))) {</span>
 
 <span class="nc" id="L26">            br.write(idProject + &quot;|&quot; + namePayer + &quot;|&quot; + numberCard + &quot;|&quot; + total + &quot;\n&quot;);</span>
-<span class="nc bnc" id="L27" title="All 8 branches missed.">        } catch (IOException ex) {</span>
-<span class="nc" id="L28">            Logger.getLogger(PaymentDaoFileImp.class.getName()).log(Level.SEVERE, null, ex);</span>
+<span class="pc bnc" id="L27" title="All 8 branches missed.">        } catch (IOException ex) {</span>
+<span class="fc" id="L28">            Logger.getLogger(PaymentDaoFileImp.class.getName()).log(Level.SEVERE, null, ex);</span>
 <span class="nc" id="L29">        }</span>
-<span class="nc" id="L30">    }</span>
+<span class="fc" id="L30">    }</span>
 
     @Override
     public int getTotal(int idProject) {

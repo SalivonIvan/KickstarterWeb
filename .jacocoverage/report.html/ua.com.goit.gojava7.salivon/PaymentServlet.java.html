@@ -14,34 +14,34 @@ import ua.com.goit.gojava7.salivon.dao.DataType;
 import ua.com.goit.gojava7.salivon.dao.PaymentDao;
 
 @WebServlet(name = &quot;PaymentServlet&quot;, urlPatterns = {&quot;/payment&quot;})
-<span class="nc" id="L17">public class PaymentServlet extends HttpServlet {</span>
+<span class="fc" id="L17">public class PaymentServlet extends HttpServlet {</span>
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-<span class="nc" id="L21">        int idProject = (int) request.getSession().getAttribute(&quot;idProject&quot;);</span>
-<span class="nc" id="L22">        Payment payment = new Payment(idProject);</span>
-<span class="nc" id="L23">        String namePayer = request.getParameter(&quot;name&quot;);</span>
-<span class="nc" id="L24">        long numberCard = Long.parseLong(request.getParameter(&quot;card&quot;));</span>
-<span class="nc" id="L25">        int total = Integer.parseInt(request.getParameter(&quot;total&quot;));</span>
-<span class="nc" id="L26">        payment.setNamePayer(namePayer);</span>
-<span class="nc" id="L27">        payment.setNumberCard(numberCard);</span>
-<span class="nc" id="L28">        payment.setTotal(total);</span>
-<span class="nc" id="L29">        savePayment(payment);</span>
-<span class="nc" id="L30">        response.sendRedirect(&quot;project&quot;);</span>
+<span class="fc" id="L21">        int idProject = (int) request.getSession().getAttribute(&quot;idProject&quot;);</span>
+<span class="fc" id="L22">        Payment payment = new Payment(idProject);</span>
+<span class="fc" id="L23">        String namePayer = request.getParameter(&quot;name&quot;);</span>
+<span class="fc" id="L24">        long numberCard = Long.parseLong(request.getParameter(&quot;card&quot;));</span>
+<span class="fc" id="L25">        int total = Integer.parseInt(request.getParameter(&quot;total&quot;));</span>
+<span class="fc" id="L26">        payment.setNamePayer(namePayer);</span>
+<span class="fc" id="L27">        payment.setNumberCard(numberCard);</span>
+<span class="fc" id="L28">        payment.setTotal(total);</span>
+<span class="fc" id="L29">        savePayment(payment);</span>
+<span class="fc" id="L30">        response.sendRedirect(&quot;project&quot;);</span>
 
-<span class="nc" id="L32">    }</span>
+<span class="fc" id="L32">    }</span>
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-<span class="nc" id="L37">        processRequest(request, response);</span>
-<span class="nc" id="L38">    }</span>
+<span class="fc" id="L37">        processRequest(request, response);</span>
+<span class="fc" id="L38">    }</span>
 
     protected void savePayment(Payment payment) {
-<span class="nc" id="L41">        DataType dType = (DataType) getServletContext().getAttribute(&quot;mode&quot;);</span>
-<span class="nc" id="L42">        PaymentDao pDao = DaoFactory.getPaymentDao(dType);</span>
-<span class="nc" id="L43">        pDao.savePayment(payment);</span>
-<span class="nc" id="L44">    }</span>
+<span class="fc" id="L41">        DataType dType = (DataType) getServletContext().getAttribute(&quot;mode&quot;);</span>
+<span class="fc" id="L42">        PaymentDao pDao = DaoFactory.getPaymentDao(dType);</span>
+<span class="fc" id="L43">        pDao.savePayment(payment);</span>
+<span class="fc" id="L44">    }</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

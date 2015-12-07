@@ -22,9 +22,9 @@ import ua.com.goit.gojava7.salivon.dao.ProjectDao;
 
     @Override
     public List&lt;Project&gt; getProjectsOfCategory(int idCategory) {
-<span class="nc" id="L25">        List&lt;Project&gt; projects = new ArrayList&lt;&gt;();</span>
-<span class="nc" id="L26">        File file = new File(PathFile.PROJECT.getPath());</span>
-<span class="nc" id="L27">        String project = null;</span>
+<span class="fc" id="L25">        List&lt;Project&gt; projects = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L26">        File file = new File(PathFile.PROJECT.getPath());</span>
+<span class="fc" id="L27">        String project = null;</span>
 <span class="nc" id="L28">        try (BufferedReader br = new BufferedReader(new FileReader(file))) {</span>
 
 <span class="nc bnc" id="L30" title="All 2 branches missed.">            while ((project = br.readLine()) != null) {</span>
@@ -42,17 +42,17 @@ import ua.com.goit.gojava7.salivon.dao.ProjectDao;
 
 <span class="nc" id="L43">            }</span>
 
-<span class="nc bnc" id="L45" title="All 8 branches missed.">        } catch (IOException ex) {</span>
-<span class="nc" id="L46">            Logger.getLogger(ProjectDaoFileImp.class.getName()).log(Level.SEVERE, null, ex);</span>
+<span class="pc bnc" id="L45" title="All 8 branches missed.">        } catch (IOException ex) {</span>
+<span class="fc" id="L46">            Logger.getLogger(ProjectDaoFileImp.class.getName()).log(Level.SEVERE, null, ex);</span>
 <span class="nc" id="L47">        }</span>
-<span class="nc" id="L48">        return projects;</span>
+<span class="fc" id="L48">        return projects;</span>
     }
 
     @Override
     public Project getProject(int idProject) {
-<span class="nc" id="L53">        Project requestedProject = null;</span>
-<span class="nc" id="L54">        File file = new File(PathFile.PROJECT.getPath());</span>
-<span class="nc" id="L55">        String project = null;</span>
+<span class="fc" id="L53">        Project requestedProject = null;</span>
+<span class="fc" id="L54">        File file = new File(PathFile.PROJECT.getPath());</span>
+<span class="fc" id="L55">        String project = null;</span>
 <span class="nc" id="L56">        try (BufferedReader br = new BufferedReader(new FileReader(file))) {</span>
 
 <span class="nc bnc" id="L58" title="All 2 branches missed.">            while ((project = br.readLine()) != null) {</span>
@@ -70,10 +70,10 @@ import ua.com.goit.gojava7.salivon.dao.ProjectDao;
 
 <span class="nc" id="L71">            }</span>
 
-<span class="nc bnc" id="L73" title="All 8 branches missed.">        } catch (IOException ex) {</span>
-<span class="nc" id="L74">            Logger.getLogger(ProjectDaoFileImp.class.getName()).log(Level.SEVERE, null, ex);</span>
+<span class="pc bnc" id="L73" title="All 8 branches missed.">        } catch (IOException ex) {</span>
+<span class="fc" id="L74">            Logger.getLogger(ProjectDaoFileImp.class.getName()).log(Level.SEVERE, null, ex);</span>
 <span class="nc" id="L75">        }</span>
-<span class="nc" id="L76">        return requestedProject;</span>
+<span class="fc" id="L76">        return requestedProject;</span>
     }
 
 }

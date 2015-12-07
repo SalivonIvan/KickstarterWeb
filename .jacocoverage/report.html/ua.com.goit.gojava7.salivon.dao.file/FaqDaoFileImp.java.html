@@ -16,16 +16,16 @@ import ua.com.goit.gojava7.salivon.dao.PathFile;
 
     @Override
     public void saveFaq(Faq faq) {
-<span class="nc" id="L19">        File file = new File(PathFile.FAQ.getPath());</span>
-<span class="nc" id="L20">        int idProject = faq.getIdProject();</span>
-<span class="nc" id="L21">        String context = faq.getContext();</span>
+<span class="fc" id="L19">        File file = new File(PathFile.FAQ.getPath());</span>
+<span class="fc" id="L20">        int idProject = faq.getIdProject();</span>
+<span class="fc" id="L21">        String context = faq.getContext();</span>
 <span class="nc" id="L22">        try (BufferedWriter br = new BufferedWriter(new FileWriter(file, true))) {</span>
 
 <span class="nc" id="L24">            br.write(idProject + &quot;|&quot; + context + &quot;\n&quot;);</span>
-<span class="nc bnc" id="L25" title="All 8 branches missed.">        } catch (IOException ex) {</span>
-<span class="nc" id="L26">            Logger.getLogger(FaqDaoFileImp.class.getName()).log(Level.SEVERE, null, ex);</span>
+<span class="pc bnc" id="L25" title="All 8 branches missed.">        } catch (IOException ex) {</span>
+<span class="fc" id="L26">            Logger.getLogger(FaqDaoFileImp.class.getName()).log(Level.SEVERE, null, ex);</span>
 <span class="nc" id="L27">        }</span>
-<span class="nc" id="L28">    }</span>
+<span class="fc" id="L28">    }</span>
 
     @Override
     public String getContextFaq(int idProject) {

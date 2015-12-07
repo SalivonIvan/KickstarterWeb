@@ -15,27 +15,27 @@ import ua.com.goit.gojava7.salivon.dao.DataType;
 import ua.com.goit.gojava7.salivon.dao.FaqDao;
 
 @WebServlet(name = &quot;FaqServlet&quot;, urlPatterns = {&quot;/faq&quot;})
-<span class="nc" id="L18">public class FaqServlet extends HttpServlet {</span>
+<span class="fc" id="L18">public class FaqServlet extends HttpServlet {</span>
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-<span class="nc" id="L22">        saveFaq(request);</span>
-<span class="nc" id="L23">        response.sendRedirect(&quot;project&quot;);</span>
-<span class="nc" id="L24">    }</span>
+<span class="fc" id="L22">        saveFaq(request);</span>
+<span class="fc" id="L23">        response.sendRedirect(&quot;project&quot;);</span>
+<span class="fc" id="L24">    }</span>
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-<span class="nc" id="L29">        processRequest(request, response);</span>
-<span class="nc" id="L30">    }</span>
+<span class="fc" id="L29">        processRequest(request, response);</span>
+<span class="fc" id="L30">    }</span>
 
     protected void saveFaq(HttpServletRequest request) {
-<span class="nc" id="L33">        String contextFaq = request.getParameter(&quot;faq&quot;);</span>
-<span class="nc" id="L34">        DataType dataType = (DataType) getServletContext().getAttribute(&quot;mode&quot;);</span>
-<span class="nc" id="L35">        FaqDao fDao = DaoFactory.getFaqDao(dataType);</span>
-<span class="nc" id="L36">        int idProject = Integer.parseInt(request.getParameter(&quot;id&quot;));</span>
-<span class="nc" id="L37">        Faq faq = new Faq(idProject, contextFaq);</span>
-<span class="nc" id="L38">        fDao.saveFaq(faq);</span>
-<span class="nc" id="L39">    }</span>
+<span class="fc" id="L33">        String contextFaq = request.getParameter(&quot;faq&quot;);</span>
+<span class="fc" id="L34">        DataType dataType = (DataType) getServletContext().getAttribute(&quot;mode&quot;);</span>
+<span class="fc" id="L35">        FaqDao fDao = DaoFactory.getFaqDao(dataType);</span>
+<span class="fc" id="L36">        int idProject = Integer.parseInt(request.getParameter(&quot;id&quot;));</span>
+<span class="fc" id="L37">        Faq faq = new Faq(idProject, contextFaq);</span>
+<span class="fc" id="L38">        fDao.saveFaq(faq);</span>
+<span class="fc" id="L39">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

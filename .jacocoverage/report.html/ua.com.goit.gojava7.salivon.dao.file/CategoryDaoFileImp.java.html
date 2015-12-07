@@ -17,9 +17,9 @@ import ua.com.goit.gojava7.salivon.dao.PathFile;
     @Override
     public List&lt;Category&gt; getAllCategories() {
 
-<span class="nc" id="L20">        List&lt;Category&gt; categories = new ArrayList&lt;&gt;();</span>
-<span class="nc" id="L21">        File file = new File(PathFile.CATEGORY.getPath());</span>
-<span class="nc" id="L22">        String category = null;</span>
+<span class="fc" id="L20">        List&lt;Category&gt; categories = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L21">        File file = new File(PathFile.CATEGORY.getPath());</span>
+<span class="fc" id="L22">        String category = null;</span>
 <span class="nc" id="L23">        try (BufferedReader br = new BufferedReader(new FileReader(file))) {</span>
 
 <span class="nc bnc" id="L25" title="All 2 branches missed.">            while ((category = br.readLine()) != null) {</span>
@@ -29,17 +29,17 @@ import ua.com.goit.gojava7.salivon.dao.PathFile;
 <span class="nc" id="L29">                categories.add(new Category(name, id));</span>
 <span class="nc" id="L30">            }</span>
 
-<span class="nc bnc" id="L32" title="All 8 branches missed.">        } catch (IOException ex) {</span>
-<span class="nc" id="L33">            Logger.getLogger(CategoryDaoFileImp.class.getName()).log(Level.SEVERE, null, ex);</span>
+<span class="pc bnc" id="L32" title="All 8 branches missed.">        } catch (IOException ex) {</span>
+<span class="fc" id="L33">            Logger.getLogger(CategoryDaoFileImp.class.getName()).log(Level.SEVERE, null, ex);</span>
 <span class="nc" id="L34">        }</span>
-<span class="nc" id="L35">        return categories;</span>
+<span class="fc" id="L35">        return categories;</span>
     }
 
     @Override
     public Category getCategory(int idCategory) {
-<span class="nc" id="L40">        Category requestedCategory = null;</span>
-<span class="nc" id="L41">        File file = new File(PathFile.CATEGORY.getPath());</span>
-<span class="nc" id="L42">        String category = null;</span>
+<span class="fc" id="L40">        Category requestedCategory = null;</span>
+<span class="fc" id="L41">        File file = new File(PathFile.CATEGORY.getPath());</span>
+<span class="fc" id="L42">        String category = null;</span>
 <span class="nc" id="L43">        try (BufferedReader br = new BufferedReader(new FileReader(file))) {</span>
 
 <span class="nc bnc" id="L45" title="All 2 branches missed.">            while ((category = br.readLine()) != null) {</span>
@@ -53,10 +53,10 @@ import ua.com.goit.gojava7.salivon.dao.PathFile;
 
 <span class="nc" id="L54">            }</span>
 
-<span class="nc bnc" id="L56" title="All 8 branches missed.">        } catch (IOException ex) {</span>
-<span class="nc" id="L57">            Logger.getLogger(CategoryDaoFileImp.class.getName()).log(Level.SEVERE, null, ex);</span>
+<span class="pc bnc" id="L56" title="All 8 branches missed.">        } catch (IOException ex) {</span>
+<span class="fc" id="L57">            Logger.getLogger(CategoryDaoFileImp.class.getName()).log(Level.SEVERE, null, ex);</span>
 <span class="nc" id="L58">        }</span>
-<span class="nc" id="L59">        return requestedCategory;</span>
+<span class="fc" id="L59">        return requestedCategory;</span>
     }
 
 }

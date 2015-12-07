@@ -1,7 +1,6 @@
 package ua.com.goit.gojava7.salivon;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
@@ -19,7 +18,7 @@ public class QuoteAndCategoryServlet extends HttpServlet {
 
     @Override
     public void init() throws ServletException {
-        super.init();
+//        super.init();
         ServletContext context = getServletContext();
         String dataType = context.getInitParameter("mode");
         switch (dataType) {

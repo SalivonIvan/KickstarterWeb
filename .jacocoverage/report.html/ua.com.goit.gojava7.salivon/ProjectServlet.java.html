@@ -14,39 +14,39 @@ import ua.com.goit.gojava7.salivon.dao.DaoFactory;
 import ua.com.goit.gojava7.salivon.dao.DataType;
 
 @WebServlet(name = &quot;ProjectServlet&quot;, urlPatterns = {&quot;/project&quot;})
-<span class="nc" id="L17">public class ProjectServlet extends HttpServlet {</span>
+<span class="fc" id="L17">public class ProjectServlet extends HttpServlet {</span>
 
     Project project;
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-<span class="nc" id="L23">        initField(request);</span>
-<span class="nc" id="L24">        HttpSession session = request.getSession();</span>
-<span class="nc" id="L25">        session.setAttribute(&quot;idProject&quot;, project.getId());</span>
-<span class="nc" id="L26">        request.setAttribute(&quot;project&quot;, project);</span>
-<span class="nc" id="L27">        RequestDispatcher dispatcher = request.getRequestDispatcher(&quot;project.jsp&quot;);</span>
-<span class="nc" id="L28">        dispatcher.forward(request, response);</span>
+<span class="fc" id="L23">        initField(request);</span>
+<span class="fc" id="L24">        HttpSession session = request.getSession();</span>
+<span class="fc" id="L25">        session.setAttribute(&quot;idProject&quot;, project.getId());</span>
+<span class="fc" id="L26">        request.setAttribute(&quot;project&quot;, project);</span>
+<span class="fc" id="L27">        RequestDispatcher dispatcher = request.getRequestDispatcher(&quot;project.jsp&quot;);</span>
+<span class="fc" id="L28">        dispatcher.forward(request, response);</span>
 
-<span class="nc" id="L30">    }</span>
+<span class="fc" id="L30">    }</span>
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-<span class="nc" id="L35">        processRequest(request, response);</span>
-<span class="nc" id="L36">    }</span>
+<span class="fc" id="L35">        processRequest(request, response);</span>
+<span class="fc" id="L36">    }</span>
 
     protected void initField(HttpServletRequest request) {
-<span class="nc" id="L39">        DataType dataType = (DataType) getServletContext().getAttribute(&quot;mode&quot;);</span>
-<span class="nc" id="L40">        String param = request.getParameter(&quot;id&quot;);</span>
+<span class="fc" id="L39">        DataType dataType = (DataType) getServletContext().getAttribute(&quot;mode&quot;);</span>
+<span class="fc" id="L40">        String param = request.getParameter(&quot;id&quot;);</span>
         int idProject;
-<span class="nc bnc" id="L42" title="All 2 branches missed.">        if (param == null) {</span>
-<span class="nc" id="L43">            idProject = ((int) request.getSession().getAttribute(&quot;idProject&quot;));</span>
+<span class="fc bfc" id="L42" title="All 2 branches covered.">        if (param == null) {</span>
+<span class="fc" id="L43">            idProject = ((int) request.getSession().getAttribute(&quot;idProject&quot;));</span>
         } else {
-<span class="nc" id="L45">            idProject = Integer.parseInt(request.getParameter(&quot;id&quot;));</span>
+<span class="fc" id="L45">            idProject = Integer.parseInt(request.getParameter(&quot;id&quot;));</span>
 
         }
-<span class="nc" id="L48">        project = DaoFactory.getProjectDao(dataType).getProject(idProject);</span>
-<span class="nc" id="L49">    }</span>
+<span class="fc" id="L48">        project = DaoFactory.getProjectDao(dataType).getProject(idProject);</span>
+<span class="fc" id="L49">    }</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>
