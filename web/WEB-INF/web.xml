@@ -5,6 +5,10 @@
         <param-name>mode</param-name>
         <param-value>db</param-value>
     </context-param>
+   
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
     <session-config>
         <session-timeout>
             30

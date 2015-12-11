@@ -5,11 +5,14 @@ import java.sql.SQLException;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import ua.com.goit.gojava7.salivon.dao.QuoteDao;
 
 public class QuoteDaoDbImp implements QuoteDao {
 
-    DBUtil util = new DBUtil();
+   
+    DBUtil util= new DBUtil();
 
     @Override
     public String getRandomQuote() {
