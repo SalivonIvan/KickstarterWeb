@@ -18,7 +18,7 @@ public class FaqDaoDbImp implements FaqDao {
         String query = "INSERT INTO faq (IdProject, Context) VALUES(" + idProject + ",'" + context + "')";
         util.openConnection();
         util.executeUpdate(query);
-        util.closeConnection();
+//        util.closeConnection();
     }
 
     @Override
@@ -35,7 +35,7 @@ public class FaqDaoDbImp implements FaqDao {
         } catch (SQLException ex) {
             Logger.getLogger(FaqDaoDbImp.class.getName()).log(Level.SEVERE, null, ex);
         }
-        util.closeConnection();
+//        util.closeConnection();
         return faq;
     }
 

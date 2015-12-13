@@ -38,7 +38,7 @@ public class QuoteDaoDbImp implements QuoteDao {
         } catch (SQLException ex) {
             Logger.getLogger(QuoteDaoDbImp.class.getName()).log(Level.SEVERE, null, ex);
         }
-        util.closeConnection();
+//        util.closeConnection();
         return quote;
     }
 
