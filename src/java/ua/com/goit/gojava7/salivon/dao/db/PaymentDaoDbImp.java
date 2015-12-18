@@ -21,7 +21,7 @@ public class PaymentDaoDbImp implements PaymentDao {
                 + namePayer + "'," + numberCard + "," + total + "," + idProject + ")";
         util.openConnection();
         util.executeUpdate(query);
-//        util.closeConnection();
+        util.closeConnection();
     }
 
     @Override
@@ -38,7 +38,7 @@ public class PaymentDaoDbImp implements PaymentDao {
         } catch (SQLException ex) {
             Logger.getLogger(PaymentDaoDbImp.class.getName()).log(Level.SEVERE, null, ex);
         }
-//        util.closeConnection();
+        util.closeConnection();
         return total;
     }
 

@@ -17,7 +17,7 @@ public class DBUtil {
     private Statement statement;
     private ResultSet result;
     @Autowired
-    @Qualifier("dataSource")
+    @Qualifier("dataSource1")
     private DataSource ds;
 
     public void openConnection() {
@@ -26,7 +26,7 @@ public class DBUtil {
 
         try {
 //            try {
-                //        try {
+            //        try {
 //            connection = DriverManager.getConnection(URL_DB, USER_DB, PASSWORD_DB);
 //            statement = connection.createStatement();
 //        } catch (SQLException ex) {
@@ -64,12 +64,16 @@ public class DBUtil {
     }
 
     public void closeConnection() {
+
         try {
             if (connection != null) {
                 connection.close();
             }
             if (statement != null) {
                 statement.close();
+            }
+            if (result != null) {
+                result.close();
             }
         } catch (SQLException ex) {
             Logger.getLogger(DBUtil.class.getName()).log(Level.SEVERE, null, ex);

@@ -11,12 +11,12 @@ public class QuoteDaoMemoryImp implements QuoteDao {
     private StoreQuotes storeQuotes = new StoreQuotes();
 
     @Override
-    public String getRandomQuote() {
+    public Quote getRandomQuote() {
         Random random = new Random();
         List<Quote> quotes = storeQuotes.getQuotes();
-        String quote;
+        Quote quote;
         int number = (int) (random.nextDouble() * quotes.size());
-        quote = quotes.get(number).getText() + "\n Autor:" + quotes.get(number).getAutor();
+        quote = quotes.get(number);
         return quote;
     }
 

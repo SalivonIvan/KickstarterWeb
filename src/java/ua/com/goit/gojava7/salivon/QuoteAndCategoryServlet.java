@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import ua.com.goit.gojava7.salivon.beans.Category;
+import ua.com.goit.gojava7.salivon.beans.Quote;
 import ua.com.goit.gojava7.salivon.dao.DaoFactory;
 import ua.com.goit.gojava7.salivon.dao.DataType;
 
@@ -38,7 +39,9 @@ public class QuoteAndCategoryServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         DataType dType = (DataType)getServletContext().getAttribute("mode");
+        Quote quote = DaoFactory.getQuoteDao(dType).getRandomQuote();
         List<Category> categories = DaoFactory.getCategoryDao(dType).getAllCategories();
+        request.setAttribute("quote", quote);
         request.setAttribute("categories", categories);
         RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
         dispatcher.forward(request, response);

@@ -3,12 +3,7 @@ package ua.com.goit.gojava7.salivon.beans;
 public class Quote {
 
     private String text;
-    private String autor;
-
-    public Quote(String text, String autor) {
-        this.text = text;
-        this.autor = autor;
-    }
+    private String author;
 
     public String getText() {
         return text;
@@ -18,12 +13,12 @@ public class Quote {
         this.text = text;
     }
 
-    public String getAutor() {
-        return autor;
+    public String getAuthor() {
+        return author;
     }
 
-    public void setAutor(String autor) {
-        this.autor = autor;
+    public void setAuthor(String autor) {
+        this.author = autor;
     }
 
 }

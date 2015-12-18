@@ -34,7 +34,7 @@ public class ProjectDaoDbImp implements ProjectDao {
         } catch (SQLException ex) {
             Logger.getLogger(ProjectDaoDbImp.class.getName()).log(Level.SEVERE, null, ex);
         }
-//        util.closeConnection();
+        util.closeConnection();
         return projects;
     }
 
@@ -54,6 +54,7 @@ public class ProjectDaoDbImp implements ProjectDao {
         } catch (SQLException ex) {
             Logger.getLogger(ProjectDaoDbImp.class.getName()).log(Level.SEVERE, null, ex);
         }
+        util.closeConnection();
         return requestedProject;
     }
 

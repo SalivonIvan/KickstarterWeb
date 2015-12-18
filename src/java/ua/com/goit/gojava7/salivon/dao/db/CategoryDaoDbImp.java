@@ -27,7 +27,7 @@ public class CategoryDaoDbImp implements CategoryDao {
         } catch (SQLException ex) {
             Logger.getLogger(CategoryDaoDbImp.class.getName()).log(Level.SEVERE, null, ex);
         }
-//        util.closeConnection();
+        util.closeConnection();
         return categories;
     }
 
@@ -44,7 +44,7 @@ public class CategoryDaoDbImp implements CategoryDao {
         } catch (SQLException ex) {
             Logger.getLogger(CategoryDaoDbImp.class.getName()).log(Level.SEVERE, null, ex);
         }
-//        util.closeConnection();
+        util.closeConnection();
         return requestedCategory;
     }
 

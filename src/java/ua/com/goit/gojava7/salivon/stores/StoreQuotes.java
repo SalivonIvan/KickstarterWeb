@@ -10,12 +10,18 @@ public class StoreQuotes {
     private static List<Quote> quotes = new ArrayList<>();
 
     static {
-        StoreQuotes.quotes.add(new Quote("Two things are infinite: the universe and human"
-                + "stupidity; and I'm not sure about the universe.", "Albert Einstein"));
-        StoreQuotes.quotes.add(new Quote("Be the change that you wish to see in the world.",
-                "Mahatma Gandhi"));
-        StoreQuotes.quotes.add(new Quote("If you tell the truth, you don't have to remember anything.",
-                "Mark Twain"));
+        Quote quote1 = new Quote();
+        quote1.setText("Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.");
+        quote1.setAuthor("Albert Einstein");
+        StoreQuotes.quotes.add(quote1);
+        Quote quote2 = new Quote();
+        quote2.setText("Be the change that you wish to see in the world.");
+        quote2.setAuthor("Mahatma Gandhi");
+        StoreQuotes.quotes.add(quote2);
+        Quote quote3 = new Quote();
+        quote3.setText("If you tell the truth, you don't have to remember anything.");
+        quote3.setAuthor("Mark Twain");
+        StoreQuotes.quotes.add(quote3);
 
     }
 
