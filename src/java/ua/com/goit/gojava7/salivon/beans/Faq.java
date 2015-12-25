@@ -5,11 +5,6 @@ public class Faq {
     private int idProject;
     private String context;
 
-    public Faq(int idProject, String context) {
-        this.idProject = idProject;
-        this.context = context;
-    }
-
     public int getIdProject() {
         return idProject;
     }

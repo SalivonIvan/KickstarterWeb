@@ -4,10 +4,10 @@
 <section id="category">
     <h1>Category ${requestScope.category.name}</h1>
     <c:forEach var="project" items="${requestScope.projects}">
-        <h2> <a href="project?id=${project.id}"> ${project.title}</a></h2>
+        <h2> <a href="project?id=${project.idProject}"> ${project.title}</a></h2>
         Description: ${project.description}<br>
-        Total ${project.total}$<br>
-        Collected amount ${project.collectedAmount}$<br>
+        Total ${project.total}<br>
+        Collected amount <br>
         Number of days to end ${project.getNumberOfDaysToEnd()}<br>
     </c:forEach>
 </section>

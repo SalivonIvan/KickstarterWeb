@@ -5,37 +5,21 @@ import java.util.Date;
 
 public class Project {
 
-    private int id;
+    private int idProject;
     private int idCategory;
     private String title;
     private String description;
     private int total;
-    private int collectedAmount;
     private int numberOfDaysToImplement;
     private Date dateStart;
     private String historyProject;
-    private String link;
-    private String faq;
-
-    public Project(String title, int total, int idCategory, int id) {
-        setDateStart();
-        description = "...description...";
-        collectedAmount = 0;
-        this.title = title;
-        this.total = total;
-        this.idCategory = idCategory;
-        historyProject = "...history...";
-        link = "...link...";
-        faq = "...FAQ...";
-        this.id = id;
-    }
 
     public Date getDateStart() {
         return dateStart;
     }
 
-    private void setDateStart() {
-        dateStart = new Date();
+    public void setDateStart(Date date) {
+        dateStart = date;
 
     }
 
@@ -87,36 +71,12 @@ public class Project {
         this.historyProject = historyProject;
     }
 
-    public String getLink() {
-        return link;
+    public void setIdProject(int id) {
+        this.idProject = id;
     }
 
-    public void setLink(String link) {
-        this.link = link;
-    }
-
-    public int getCollectedAmount() {
-        return collectedAmount;
-    }
-
-    public void setCollectedAmount(int collectedAmount) {
-        this.collectedAmount += collectedAmount;
-    }
-
-    public String getFaq() {
-        return faq;
-    }
-
-    public void setFaq(String faq) {
-        this.faq += faq + "\n";
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getId() {
-        return id;
+    public int getIdProject() {
+        return idProject;
     }
 
     public int getNumberOfDaysToEnd() {

@@ -3,17 +3,17 @@
 <section id="category">
     <h2>${requestScope.project.title}</h2>
     Description: ${requestScope.project.description}<br>
-    Total ${requestScope.project.total}$<br>
-    Collected amount ${requestScope.project.collectedAmount}$<br>
+    Total ${requestScope.project.total}<br>
+    Collected amount <br>
     Number of days to end ${requestScope.project.getNumberOfDaysToEnd()}<br>
     History ${requestScope.project.historyProject}<br>
-    Link ${requestScope.project.link}<br>
-    FAQ ${requestScope.project.faq}<br>
+    Link <br>
+    FAQ <br>
     <form action="faq" method="post">
         <p>Enter your questions:</p>
         <textarea name="faq" rows="10" cols="60" >
         </textarea><br>
-        <input type="hidden" name="id" value="${requestScope.project.id}" />
+        <input type="hidden" name="id" value="${requestScope.project.idProject}" />
         <input type="submit" value="Question" />
     </form>
     <div> <a href="payment.jsp">Make a contribution</a></div>

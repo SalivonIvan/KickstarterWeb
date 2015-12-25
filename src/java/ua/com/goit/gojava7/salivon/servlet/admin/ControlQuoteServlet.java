@@ -23,8 +23,8 @@ public class ControlQuoteServlet extends HttpServlet {
             QuoteDaoDbImp dao = new QuoteDaoDbImp();
             dao.addQuote(quote);
             response.sendRedirect("admin/controlQuotes.html");
-
-        } else {
+            
+        }else{
             response.sendRedirect("admin/controlQuotes.html");
         }
 

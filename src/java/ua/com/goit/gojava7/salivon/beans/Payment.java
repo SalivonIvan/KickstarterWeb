@@ -7,10 +7,6 @@ public class Payment {
     private long numberCard;
     private int total;
 
-    public Payment(int idProject) {
-        this.idProject = idProject;
-    }
-
     public int getIdProject() {
         return idProject;
     }

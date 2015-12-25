@@ -11,36 +11,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import ua.com.goit.gojava7.salivon.beans.Category;
 import ua.com.goit.gojava7.salivon.beans.Quote;
-import ua.com.goit.gojava7.salivon.dao.DaoFactory;
-import ua.com.goit.gojava7.salivon.dao.DataType;
+import ua.com.goit.gojava7.salivon.dao.db.CategoryDaoDbImp;
+import ua.com.goit.gojava7.salivon.dao.db.QuoteDaoDbImp;
 
 @WebServlet(name = "QuteAndCategoryServlet", urlPatterns = {""})
 public class QuoteAndCategoryServlet extends HttpServlet {
 
-    @Override
-    public void init() throws ServletException {
-//        super.init();
-        ServletContext context = getServletContext();
-        String dataType = context.getInitParameter("mode");
-        switch (dataType) {
-            case "file":
-                context.setAttribute("mode", DataType.FILE);
-                break;
-            case "memory":
-                context.setAttribute("mode", DataType.MEMORY);
-                break;
-            case "db":
-                context.setAttribute("mode", DataType.DB);
-                break;
-        }
-
-    }
-
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        DataType dType = (DataType)getServletContext().getAttribute("mode");
-        Quote quote = DaoFactory.getQuoteDao(dType).getRandomQuote();
-        List<Category> categories = DaoFactory.getCategoryDao(dType).getAllCategories();
+
+        Quote quote = new QuoteDaoDbImp().getRandomQuote();
+        List<Category> categories = new CategoryDaoDbImp().getAllCategories();
         request.setAttribute("quote", quote);
         request.setAttribute("categories", categories);
         RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");

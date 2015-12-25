@@ -7,9 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import ua.com.goit.gojava7.salivon.beans.Faq;
-import ua.com.goit.gojava7.salivon.dao.DaoFactory;
-import ua.com.goit.gojava7.salivon.dao.DataType;
 import ua.com.goit.gojava7.salivon.dao.FaqDao;
+import ua.com.goit.gojava7.salivon.dao.db.FaqDaoDbImp;
 
 @WebServlet(name = "FaqServlet", urlPatterns = {"/faq"})
 public class FaqServlet extends HttpServlet {
@@ -28,10 +27,11 @@ public class FaqServlet extends HttpServlet {
 
     protected void saveFaq(HttpServletRequest request) {
         String contextFaq = request.getParameter("faq");
-        DataType dataType = (DataType) getServletContext().getAttribute("mode");
-        FaqDao fDao = DaoFactory.getFaqDao(dataType);
+        FaqDao fDao = new FaqDaoDbImp();
         int idProject = Integer.parseInt(request.getParameter("id"));
-        Faq faq = new Faq(idProject, contextFaq);
+        Faq faq = new Faq();
+        faq.setContext(contextFaq);
+        faq.setIdProject(idProject);
         fDao.saveFaq(faq);
     }
 }
