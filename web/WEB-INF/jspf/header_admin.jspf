@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="<%= application.getContextPath()%>/kickstarter.css" rel="stylesheet" >
+        <link href="<%= application.getContextPath()%>/resource/css/kickstarter.css" rel="stylesheet" >
         <title>KickstarterAdmin</title>
     </head>
     <body>

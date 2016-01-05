@@ -27,10 +27,13 @@ public class PaymentDaoDbImp implements PaymentDao {
 
     @Override
     public int getTotal(int idProject) {
-        int total = 0;
+        Integer total;
         String query = "SELECT SUM(total) FROM payment WHERE IdProject=?";
         JdbcTemplate jt = new JdbcTemplate(dataSource);
         total = jt.queryForObject(query, Integer.class, idProject);
+        if (total == null) {
+            return 0;
+        } 
         return total;
     }
 

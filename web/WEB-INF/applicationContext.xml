@@ -33,6 +33,6 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
     <bean id="tamplateJdbc" class="org.springframework.jdbc.core.simple.SimpleJdbcTemplate">
         <constructor-arg ref="dataSource"/>
     </bean>
-    <bean id="dbUtil" class="ua.com.goit.gojava7.salivon.dao.db.DBUtil" />
+    
         
 </beans>

@@ -21,7 +21,7 @@ h1{
 header{
     margin: 10px 10px 0px 10px;
     background: lightgray;
-    background-image: url(resource/logo.svg),url(resource/logo_name.svg);
+    background-image: url(../image/logo.svg),url(../image/logo_name.svg);
     background-size: 5em,25%;
     background-repeat: no-repeat;
     background-position: left center,center;
@@ -86,4 +86,3 @@ footer{
     border: 1px gray solid;
     font-size: large;
 }
-

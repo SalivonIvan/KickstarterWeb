@@ -28,7 +28,7 @@ public class FaqDaoDbImp implements FaqDao {
 
     @Override
     public List<Faq> getContextFaq(int idProject) {
-        String query = "SELECT Context FROM faq WHERE IdProject=?";
+        String query = "SELECT * FROM faq WHERE IdProject=?";
         JdbcTemplate jt = new JdbcTemplate(dataSource);
         return jt.query(query, new FaqMapper(), idProject);
     }

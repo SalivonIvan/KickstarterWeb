@@ -4,7 +4,7 @@
     <h2>${requestScope.project.title}</h2>
     Description: ${requestScope.project.description}<br>
     Total ${requestScope.project.total}<br>
-    Collected amount <br>
+    Collected amount ${requestScope.total}<br>
     Number of days to end ${requestScope.project.getNumberOfDaysToEnd()}<br>
     History ${requestScope.project.historyProject}<br>
     Link <br>

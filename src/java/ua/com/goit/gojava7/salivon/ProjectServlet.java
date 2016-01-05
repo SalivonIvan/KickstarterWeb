@@ -9,12 +9,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import ua.com.goit.gojava7.salivon.beans.Project;
+import ua.com.goit.gojava7.salivon.dao.db.PaymentDaoDbImp;
 import ua.com.goit.gojava7.salivon.dao.db.ProjectDaoDbImp;
 
 @WebServlet(name = "ProjectServlet", urlPatterns = {"/project"})
 public class ProjectServlet extends HttpServlet {
 
     private Project project;
+    private int total;
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -22,6 +24,7 @@ public class ProjectServlet extends HttpServlet {
         HttpSession session = request.getSession();
         session.setAttribute("idProject", project.getIdProject());
         request.setAttribute("project", project);
+        request.setAttribute("total", total);
         RequestDispatcher dispatcher = request.getRequestDispatcher("project.jsp");
         dispatcher.forward(request, response);
 
@@ -43,6 +46,7 @@ public class ProjectServlet extends HttpServlet {
 
         }
         project = new ProjectDaoDbImp().getProject(idProject);
+        total = new PaymentDaoDbImp().getTotal(idProject);
     }
 
 }
