@@ -14,6 +14,13 @@ html, body{
 main{
     min-height: 100%;
 }
+.panel{
+    border: none;
+    background-color: #F7FAFA;
+}
+.panel-default>.panel-heading{
+    background-color: #C4CEA0;
+}
 .border-top{
     padding: 20px 0px;
     border-top: #ddd solid thin;
@@ -21,7 +28,7 @@ main{
 .bottom-info{
     padding-top: 20px;
     padding-bottom: 20px;
-   
+
 }
 .my-glyphicon{
     margin-bottom: 30px;
@@ -90,12 +97,6 @@ header img{
 }
 .thumbnail{
     padding: 0px;
-}
-.label-name-category{
-    font-size: 100%;
-}
-.label-name-project{
-    font-size: 150%;
 }
 .map-and-ganre{
     display: inline-block;
