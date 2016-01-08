@@ -24,6 +24,11 @@ main{
 .border-top{
     padding: 20px 0px;
     border-top: #ddd solid thin;
+
+}
+.author-info-panel{
+    padding-top: 70px;
+    padding-bottom: 40px;
 }
 .bottom-info{
     padding-top: 20px;
@@ -50,18 +55,17 @@ main{
 .icon-share{
     margin-right: 5px;
 }
+.modal-header{
+    background-color: #C4CEA0;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
 .footer {
     position: absolute;
     width: 100%;
-    /* Set the fixed height of the footer here */
-    /*    height: 60px;*/
-    /*    background-color: #f5f5f5;*/
+    height: 60px;
+    padding-top: 20px;
     background-color: #0F2105;
-}
-
-.container .text-muted {
-    margin: 20px 0;
-    text-align: center;
 }
 
 header img{
@@ -70,19 +74,19 @@ header img{
 .navbar-brand{
     margin-top: -30px; 
 }
-.link-category{
-    margin-bottom: 15px;
-    width: 180px;
 
-
+.list-group-item{
+    background-color: #F7FAFA;
 }
-
-.link-category:hover{
+.list-group a:hover{
+    background-color:#bce8f1; 
+}
+.nav>li>a:hover{
     background-color:#bce8f1;
 }
-/*.btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default {
-    background-image: url(../image/button_backround.svg);
-}*/
+.nav>li>a{
+    color:black;
+}
 .navbar-default .navbar-nav>li>a {
     color: black;
 }
