@@ -13,6 +13,15 @@ public class Project {
     private int numberOfDaysToImplement;
     private Date dateStart;
     private String historyProject;
+    private String poster;
+
+    public String getPoster() {
+        return poster;
+    }
+
+    public void setPoster(String poster) {
+        this.poster = poster;
+    }
 
     public Date getDateStart() {
         return dateStart;

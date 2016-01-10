@@ -7,4 +7,6 @@ public interface PaymentDao {
     public void savePayment(Payment payment);
 
     public int getTotal(int idProject);
+
+    public int getCountBackers(int idProject);
 }

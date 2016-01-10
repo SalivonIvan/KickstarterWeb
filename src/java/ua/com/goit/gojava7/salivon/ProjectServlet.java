@@ -17,6 +17,7 @@ public class ProjectServlet extends HttpServlet {
 
     private Project project;
     private int total;
+    private int countBackers;
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -25,6 +26,7 @@ public class ProjectServlet extends HttpServlet {
         session.setAttribute("idProject", project.getIdProject());
         request.setAttribute("project", project);
         request.setAttribute("total", total);
+        request.setAttribute("countBackers", countBackers);
         RequestDispatcher dispatcher = request.getRequestDispatcher("project.jsp");
         dispatcher.forward(request, response);
 
@@ -47,6 +49,7 @@ public class ProjectServlet extends HttpServlet {
         }
         project = new ProjectDaoDbImp().getProject(idProject);
         total = new PaymentDaoDbImp().getTotal(idProject);
+        countBackers = new PaymentDaoDbImp().getCountBackers(idProject);
     }
 
 }

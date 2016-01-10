@@ -36,5 +36,16 @@ public class PaymentDaoDbImp implements PaymentDao {
         } 
         return total;
     }
+     @Override
+    public int getCountBackers(int idProject) {
+        Integer total;
+        String query = "SELECT SUM(idProject) FROM payment WHERE IdProject=?";
+        JdbcTemplate jt = new JdbcTemplate(dataSource);
+        total = jt.queryForObject(query, Integer.class, idProject);
+        if (total == null) {
+            return 0;
+        } 
+        return total;
+    }
 
 }

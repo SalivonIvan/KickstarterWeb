@@ -23,7 +23,7 @@ public class ProjectDaoDbImp implements ProjectDao {
     @Override
     public List<Project> getProjectsOfCategory(int idCategory) {
         JdbcTemplate jt = new JdbcTemplate(dataSource);
-        List<Project> projects = new ArrayList<>();
+        List<Project> projects;
         String query = "SELECT * FROM project WHERE IdCategory = ?";
         projects = jt.query(query, new ProjectMapper(), idCategory);
         return projects;

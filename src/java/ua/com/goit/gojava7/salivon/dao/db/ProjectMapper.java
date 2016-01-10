@@ -17,6 +17,7 @@ public class ProjectMapper implements RowMapper<Project> {
        project.setDescription(rs.getString("Description"));
        project.setHistoryProject(rs.getString("HistoryProject"));
        project.setDateStart(rs.getDate("DateStart"));
+       project.setPoster(rs.getString("Poster"));
        project.setNumberOfDaysToImplement(rs.getInt("NumberOfDaysToImplement"));
        return project;
     }

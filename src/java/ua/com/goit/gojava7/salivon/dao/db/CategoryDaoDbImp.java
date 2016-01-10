@@ -1,11 +1,7 @@
 package ua.com.goit.gojava7.salivon.dao.db;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -26,7 +22,7 @@ public class CategoryDaoDbImp implements CategoryDao {
 
     @Override
     public List<Category> getAllCategories() {
-        List<Category> categories = new ArrayList<>();
+        List<Category> categories;
         JdbcTemplate jt = new JdbcTemplate(dataSource);
         String query = "SELECT IdCategory, Name FROM category ORDER BY name";
         categories = jt.query(query, new CategoryMapper());
