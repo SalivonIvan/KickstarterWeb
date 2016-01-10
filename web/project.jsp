@@ -143,14 +143,14 @@
                             </a>
                         </h4>
                         <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <form role="form">
+                            <form role="form" action="${pageContext.servletContext.contextPath}/payment.jsp">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Pledge amount</label>
                                     <strong> <input type="text" class="form-control" id="exampleInputEmail1" value="$1"></strong>
                                 </div>
-                                <a  type="submit" href="${pageContext.servletContext.contextPath}/payment.jsp" class="btn btn-success btn-block">
+                                <button  type="submit" class="btn btn-success btn-block">
                                     <strong>Continue</strong>
-                                </a>
+                                </button>
                             </form>
                         </div>
                     </div>
@@ -173,9 +173,9 @@
                                     <label for="exampleInputEmail1">Pledge amount</label>
                                     <strong> <input type="text" class="form-control" id="exampleInputEmail1" value="$1"></strong>
                                 </div>
-                                <a  type="submit" href="${pageContext.servletContext.contextPath}/payment.jsp" class="btn btn-success btn-block">
+                                <button  type="submit" class="btn btn-success btn-block">
                                     <strong>Continue</strong>
-                                </a>
+                                </button>
                             </form>
                         </div>
                     </div>
@@ -198,9 +198,9 @@
                                     <label for="exampleInputEmail1">Pledge amount</label>
                                     <strong> <input type="text" class="form-control" id="exampleInputEmail1" value="$10"></strong>
                                 </div>
-                                <a  type="submit" href="${pageContext.servletContext.contextPath}/payment.jsp" class="btn btn-success btn-block">
+                                <button  type="submit" class="btn btn-success btn-block">
                                     <strong>Continue</strong>
-                                </a>
+                                </button>
                             </form>
                         </div>
                     </div>
@@ -223,9 +223,9 @@
                                     <label for="exampleInputEmail1">Pledge amount</label>
                                     <strong> <input type="text" class="form-control" id="exampleInputEmail1" value="$40"></strong>
                                 </div>
-                                <a  type="submit" href="${pageContext.servletContext.contextPath}/payment.jsp" class="btn btn-success btn-block">
+                                <button  type="submit" class="btn btn-success btn-block">
                                     <strong>Continue</strong>
-                                </a>
+                                </button>
                             </form>
                         </div>
                     </div>
