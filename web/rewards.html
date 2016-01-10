@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Kickstarter</title>
+
+        <!-- Bootstrap -->
+        <link href="resource/css/bootstrap.min.css" rel="stylesheet">
+        <!--<link href="resource/css/kickstarter.css" rel="stylesheet">-->
+        <link href="resource/css/test.css" rel="stylesheet">
+
+        <!-- Вставка HTML5 поєднується з Respond.js для підтримки в IE8 елементів HTML5 та медіа-запитів -->
+        <!-- ЗАСТЕРЕЖЕННЯ: файл Respond.js не працює, якщо ви проглядаєте сторінку відкривши її з файлової системи -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <header>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 logo text-left">
+                        <p>
+                            <img height="100" src="resource/image/logo.svg">
+                            <img height="50" src="resource/image/logo_name.svg">
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <blockquote>I'm selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can't handle me at my worst, then you sure as hell don't deserve me at my best. 
+                            <br/> <em>
+                                <mark>Marilyn Monroe</mark>
+                            </em>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">
+                            <img height="30" src="resource/image/logo.svg">
+                        </a>
+                    </div>
+                    <div id="navbar" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar-left">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#about">Start a project</a></li>
+                            <li><a href="#contact">About us</a></li>
+                        </ul>
+
+                        <form class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search Projects">
+                            </div>
+                            <button type="submit" class="btn btn-default">
+                                Search
+                            </button>
+                        </form>
+                        <p class="navbar-text navbar-left">Ви увійшли як <a href="#" class="navbar-link">Mark Otto</a></p>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#contact">Sign up</a></li>
+                            <li><a href="#contact">Log in</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="main">
+                <div class="container-fluid">
+                    <div class="row">
+
+                        <div class="well well-sm">
+                            <h2 class="text-center"><strong>The Exiled: Siege</strong></h2>
+                            <h4 class="text-center">by <strong>Author (First name, Last name)</strong></h4>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h3>
+                                Let's choose your reward!
+                            </h3> 
+                            <div class="well">
+                                <h5><strong>Pledge $1</strong></h5>
+                                <p><small> <strong>count backers</strong></small></p>
+                                <p>I just want to help the project.
+                                </p>
+                                <h4>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapseOne">
+                                        Select this reward
+                                    </a>
+                                </h4>
+                                <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                    <form role="form">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Pledge amount</label>
+                                            <strong> <input type="text" class="form-control" id="exampleInputEmail1" value="$1"></strong>
+                                        </div>
+                                        <button type="submit" class="btn btn-success btn-block"><strong>Continue</strong></button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="well">
+                                <h5><strong>Pledge $1 or more</strong></h5>
+                                <p><small> <strong>count backers</strong></small></p>
+                                <p>You or your character's name will be listed on the credits page as one of our supporters: the army of the night.
+                                </p>
+                                <strong>Estimated delivery:</strong>
+                                <br>
+                                Dec 2016
+                                <h4>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapseOne">
+                                        Select this reward
+                                    </a>
+                                </h4>
+                                <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                    <form role="form">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Pledge amount</label>
+                                            <strong> <input type="text" class="form-control" id="exampleInputEmail1" value="$1"></strong>
+                                        </div>
+                                        <button type="submit" class="btn btn-success btn-block"><strong>Continue</strong></button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="well">
+                                <h5><strong>Pledge $10 or more</strong></h5>
+                                <p><small> <strong>count backers</strong></small></p>
+                                <p>You or your character's name will be listed on the credits page as one of our supporters: the army of the night.
+                                </p>
+                                <strong>Estimated delivery:</strong>
+                                <br>
+                                Dec 2016
+                                <h4>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapseOne">
+                                        Select this reward
+                                    </a>
+                                </h4>
+                                <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                    <form role="form">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Pledge amount</label>
+                                            <strong> <input type="text" class="form-control" id="exampleInputEmail1" value="$10"></strong>
+                                        </div>
+                                        <button type="submit" class="btn btn-success btn-block"><strong>Continue</strong></button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="well">
+                                <h5><strong>Pledge $40 or more</strong></h5>
+                                <p><small> <strong>count backers</strong></small></p>
+                                <p>You or your character's name will be listed on the credits page as one of our supporters: the army of the night.
+                                </p>
+                                <strong>Estimated delivery:</strong>
+                                <br>
+                                Dec 2016
+                                <h4>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="true" aria-controls="collapseOne">
+                                        Select this reward
+                                    </a>
+                                </h4>
+                                <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                    <form role="form">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Pledge amount</label>
+                                            <strong> <input type="text" class="form-control" id="exampleInputEmail1" value="$40"></strong>
+                                        </div>
+                                        <button type="submit" class="btn btn-success btn-block"><strong>Continue</strong></button>
+                                    </form>
+                                </div>
+                            </div>                        
+                        </div>
+                        <div class="col-md-4">
+                            <div class="well bg-my-well">
+                                <h4><strong>Kickstarter is not a store.</strong></h4>
+                                <h5>It's a way to bring creative projects to life.</h5>
+                                <p>
+                                    <small> Kickstarter does not guarantee projects or investigate a creator's ability to complete their project. It is the responsibility of the project creator to complete their project as promised, and the claims of this project are theirs alone.
+                                    </small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+        </main>
+        <footer class="footer text-center">
+            <div class="container">
+                <p class="text-muted">&copy; Copyright ${currentYear} 
+                    Salivon Ivan &amp; Associates, Inc. All rights reserved.
+                </p>
+            </div>
+        </footer>
+        <!-- jQuery (потрібно для JavaScript плагінів Bootstrap) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- Підключення мінімізованої збірки всіх плагінів jQuery. Можна підключати додаткові плагіни, якщо потрібно -->
+        <script src="resource/js/bootstrap.min.js"></script>
+    </body>
+</html>

@@ -60,6 +60,12 @@ main{
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
 }
+.link-author{
+    cursor: pointer;
+}
+.link-author h5{
+    padding-top: 30px;
+}
 .footer {
     position: absolute;
     width: 100%;
@@ -75,17 +81,19 @@ header img{
     margin-top: -30px; 
 }
 
-.list-group-item{
-    background-color: #F7FAFA;
-}
-.list-group a:hover{
-    background-color:#bce8f1; 
-}
 .nav>li>a:hover{
     background-color:#bce8f1;
+
 }
 .nav>li>a{
     color:black;
+
+}
+.link-category{
+    background-color: #d6e9c6;
+    font-size: 150%;
+    font-family: cursive;
+
 }
 .navbar-default .navbar-nav>li>a {
     color: black;
@@ -109,4 +117,16 @@ header img{
 .button-back-remaind{
     margin-top: 20px;
     margin-bottom: 20px;
+}
+.well-sm{
+    background-color: #C4CEA0;
+}
+.link-info-cvn{
+    cursor: pointer;
+}
+.select-month{
+    width: 70%;
+}
+.bg-my-well{
+    background-color: lightpink;
 }
