@@ -168,7 +168,7 @@
                             </a>
                         </h4>
                         <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <form role="form">
+                            <form role="form" action="${pageContext.servletContext.contextPath}/payment.jsp">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Pledge amount</label>
                                     <strong> <input type="text" class="form-control" id="exampleInputEmail1" value="$1"></strong>
@@ -193,7 +193,7 @@
                             </a>
                         </h4>
                         <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <form role="form">
+                            <form role="form" action="${pageContext.servletContext.contextPath}/payment.jsp">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Pledge amount</label>
                                     <strong> <input type="text" class="form-control" id="exampleInputEmail1" value="$10"></strong>
@@ -218,7 +218,7 @@
                             </a>
                         </h4>
                         <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <form role="form">
+                            <form role="form"  action="${pageContext.servletContext.contextPath}/payment.jsp">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Pledge amount</label>
                                     <strong> <input type="text" class="form-control" id="exampleInputEmail1" value="$40"></strong>
