@@ -11,7 +11,7 @@ import ua.com.goit.gojava7.salivon.dao.PaymentDao;
 public class PaymentDaoDbImp implements PaymentDao {
 
     @Autowired
-    @Qualifier("dataSource1")
+    @Qualifier("dataSource")
     private DataSource dataSource;
 
     public PaymentDaoDbImp() {

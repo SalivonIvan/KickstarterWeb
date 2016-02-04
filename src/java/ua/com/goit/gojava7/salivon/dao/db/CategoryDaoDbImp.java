@@ -13,7 +13,7 @@ import ua.com.goit.gojava7.salivon.dao.CategoryDao;
 public class CategoryDaoDbImp implements CategoryDao {
 
     @Autowired
-    @Qualifier("dataSource1")
+    @Qualifier("dataSource")
     private DataSource dataSource;
 
     public CategoryDaoDbImp() {

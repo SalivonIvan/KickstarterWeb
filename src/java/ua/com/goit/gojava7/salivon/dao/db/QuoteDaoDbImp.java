@@ -14,7 +14,7 @@ import ua.com.goit.gojava7.salivon.dao.QuoteDao;
 public class QuoteDaoDbImp implements QuoteDao {
 
     @Autowired
-    @Qualifier("dataSource1")
+    @Qualifier("dataSource")
     private DataSource dataSource;
     static Logger log = LogManager.getLogger(QuoteDaoDbImp.class);
 
@@ -32,11 +32,13 @@ public class QuoteDaoDbImp implements QuoteDao {
 
     @Override
     public Quote getRandomQuote() {
+        log.info("add random quote info");
         String query = "SELECT Text, Author FROM quote ORDER BY rand()LIMIT 1";
         JdbcTemplate jt = new JdbcTemplate(dataSource);
         Quote quote = null;
         quote = jt.queryForObject(query, new QuoteMapper());
         return quote;
+        
     }
 
 }

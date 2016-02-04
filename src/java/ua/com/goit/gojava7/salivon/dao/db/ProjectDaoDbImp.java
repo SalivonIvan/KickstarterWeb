@@ -13,7 +13,7 @@ import ua.com.goit.gojava7.salivon.dao.ProjectDao;
 public class ProjectDaoDbImp implements ProjectDao {
 
     @Autowired
-    @Qualifier("dataSource1")
+    @Qualifier("dataSource")
     private DataSource dataSource;
 
     public ProjectDaoDbImp() {

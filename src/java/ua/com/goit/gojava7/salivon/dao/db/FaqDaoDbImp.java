@@ -12,7 +12,7 @@ import ua.com.goit.gojava7.salivon.dao.FaqDao;
 public class FaqDaoDbImp implements FaqDao {
 
     @Autowired
-    @Qualifier("dataSource1")
+    @Qualifier("dataSource")
     private DataSource dataSource;
 
     public FaqDaoDbImp() {
