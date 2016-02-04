@@ -23,22 +23,23 @@ public class QuoteDaoDbImp implements QuoteDao {
     }
 
     public void addQuote(Quote quote) {
-        log.info("add quote ingo");
+
         String sql = "INSERT INTO quote (Text, Author) values (?, ?)";
         JdbcTemplate jt = new JdbcTemplate(dataSource);
         jt.update(sql, quote.getText(), quote.getAuthor());
-        log.debug("add quote debug");
+        log.info("add quote");
+        log.debug("add quote");
     }
 
     @Override
     public Quote getRandomQuote() {
-        log.info("add random quote info");
         String query = "SELECT Text, Author FROM quote ORDER BY rand()LIMIT 1";
         JdbcTemplate jt = new JdbcTemplate(dataSource);
         Quote quote = null;
         quote = jt.queryForObject(query, new QuoteMapper());
+        log.info("add random quote");
         return quote;
-        
+
     }
 
 }
