@@ -3,8 +3,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="${pageContext.servletContext.contextPath}/resource/css/bootstrap..css" rel="stylesheet" >
-        <link href="${pageContext.servletContext.contextPath}/resource/css/kickstarter.css" rel="stylesheet" >
+        <link href="<%= application.getContextPath()%>/resource/css/kickstarter.css" rel="stylesheet" >
         <title>KickstarterAdmin</title>
     </head>
     <body>
@@ -12,7 +11,7 @@
         </header>
         <nav>
             <ul>
-                <li><a href="${pageContext.servletContext.contextPath}/admin?link=controlQuotes.html">Control Quote</a></li>
+                <li><a href="<%= application.getContextPath()%>/admin?link=controlQuotes.html">Control Quote</a></li>
                 <li><a href="">Control Category</a></li>
 
             </ul>
