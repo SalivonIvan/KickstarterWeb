@@ -5,7 +5,7 @@
             <PatternLayout pattern="%d %-5p [%t] %C{2} (%F:%L) - %m%n"/>
         </Console>
         <File name="TEMP" fileName="Kickstarter.log">
-            <PatternLayout pattern="%d %-5p [%t] %C{2} (%F:%L) - %m%n"/>
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </File>
         <Async name="ASYNC">
             <AppenderRef ref="TEMP"/>
@@ -13,7 +13,7 @@
         </Async>
     </Appenders>
     <Loggers>
-        <Root level="debug">
+        <Root level="info">
             <AppenderRef ref="ASYNC"/>
         </Root>
     </Loggers>

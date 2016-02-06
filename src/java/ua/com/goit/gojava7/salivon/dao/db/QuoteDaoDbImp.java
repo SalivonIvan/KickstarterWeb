@@ -38,6 +38,7 @@ public class QuoteDaoDbImp implements QuoteDao {
         Quote quote = null;
         quote = jt.queryForObject(query, new QuoteMapper());
         log.info("add random quote");
+        log.debug("add random quote");
         return quote;
 
     }

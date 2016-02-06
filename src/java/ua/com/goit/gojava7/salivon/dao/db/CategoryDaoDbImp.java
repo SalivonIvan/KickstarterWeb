@@ -17,7 +17,7 @@ public class CategoryDaoDbImp implements CategoryDao {
     @Autowired
     @Qualifier("dataSource")
     private DataSource dataSource;
-    static Logger log = LogManager.getLogger(QuoteDaoDbImp.class);
+    static Logger log = LogManager.getLogger(CategoryDaoDbImp.class);
 
     public CategoryDaoDbImp() {
         SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext(this);
